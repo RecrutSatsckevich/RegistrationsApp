@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5CE-0m-tJj">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="772.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="776"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pqf-qZ-gFn">
                                                 <rect key="frame" x="309" y="16" width="89" height="39.5"/>
@@ -88,7 +88,6 @@
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EmN-UU-dgf">
                                                                 <rect key="frame" x="0.0" y="0.0" width="364" height="34"/>
-                                                                <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                                                 <connections>
@@ -158,18 +157,17 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wGu-Pi-ZgW">
-                                                <rect key="frame" x="152.5" y="669" width="109.5" height="39.5"/>
+                                                <rect key="frame" x="146.5" y="669" width="121" height="43"/>
                                                 <color key="tintColor" red="0.30945309999999998" green="0.48427128790000001" blue="0.68933904170000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Continue">
-                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="21"/>
+                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="24"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="continueBtnAction" destination="Y6W-OH-hqX" eventType="touchUpInside" id="53I-De-bB8"/>
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="wGu-Pi-ZgW" firstAttribute="top" secondItem="ZPY-lf-8GC" secondAttribute="bottom" constant="50" id="2hI-ze-3YQ"/>
                                             <constraint firstItem="ZPY-lf-8GC" firstAttribute="top" secondItem="Pqf-qZ-gFn" secondAttribute="bottom" constant="48" id="Cdu-nT-SDh"/>
@@ -193,7 +191,7 @@
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.34901961679999999" green="0.67058825489999996" blue="0.88235294819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="0ZQ-pT-fyi" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="1gH-zr-HH1"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="0ZQ-pT-fyi" secondAttribute="bottom" id="DcQ-9s-rPI"/>
@@ -308,7 +306,7 @@ from mail@mail.com</string>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FWj-03-Xdf"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.34901961679999999" green="0.68627452850000004" blue="0.84313726430000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="FWj-03-Xdf" firstAttribute="trailing" secondItem="VNW-hN-Fb4" secondAttribute="trailing" constant="50" id="6s4-VP-FFt"/>
                             <constraint firstItem="VNW-hN-Fb4" firstAttribute="leading" secondItem="FWj-03-Xdf" secondAttribute="leading" constant="50" id="8KQ-yH-7t6"/>
@@ -328,9 +326,6 @@ from mail@mail.com</string>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
