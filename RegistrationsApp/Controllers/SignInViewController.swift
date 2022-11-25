@@ -8,32 +8,37 @@
 import UIKit
 
 class SignInViewController: UIViewController {
-
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var errorLbl: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Ищет одиночные или множественные касания.
-        let tap = UITapGestureRecognizer(target: self,
-                                         action: #selector(UIInputViewController.dismissKeyboard))
-        view.addGestureRecognizer(tap)
+        if UserDefaultsService.getUserModel() != nil {
+            performSegue(withIdentifier: "goToMainTBVC", sender: nil)
+        }
+        hideKeyboardWhenTappedAround()
     }
     
-
-    // MARK: - Extension
-    // метод закрытия клавиатуры
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
+    override func viewWillAppear(_ animated: Bool) {
+        emailTextField.text = ""
+        passwordTextField.text = ""
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func signInAction() {
+        errorLbl.isHidden = true
+        guard let email = emailTextField.text,
+              let password = passwordTextField.text,
+              let userModel = UserDefaultsService.getUserModel(),
+              email == userModel.email,
+              password == userModel.pass
+        else {
+            errorLbl.isHidden = false
+            return
+        }
+        performSegue(withIdentifier: "goToMainTBVC", sender: nil)
     }
-    */
-
 }
 
 
