@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,21 +24,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="Ae5-i5-pzE" kind="show" id="yEt-sG-6Ug"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxI-fS-ap4">
-                                <rect key="frame" x="132" y="550" width="150" height="43"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="FYq-60-BUf"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Sign In">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
-                                    <color key="baseForegroundColor" systemColor="labelColor"/>
-                                    <color key="baseBackgroundColor" name="AccentColor"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="signInAction" destination="Y6W-OH-hqX" eventType="touchUpInside" id="SQu-dI-mP5"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="FpI-R2-3hm">
@@ -74,15 +58,29 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xFz-xg-Cfa">
+                                <rect key="frame" x="152" y="585" width="110" height="39.5"/>
+                                <color key="backgroundColor" red="0.83529412749999998" green="0.90196073060000004" blue="0.99215686319999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="ZMh-c5-QCz"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sign In">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="21"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="signInAction" destination="Y6W-OH-hqX" eventType="touchUpInside" id="VfT-bb-VAh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="xFz-xg-Cfa" firstAttribute="top" secondItem="FpI-R2-3hm" secondAttribute="bottom" constant="95" id="03v-Op-k3A"/>
                             <constraint firstItem="FpI-R2-3hm" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="Cs1-S0-JKx"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="FpI-R2-3hm" secondAttribute="trailing" constant="25" id="NcE-I3-Jye"/>
-                            <constraint firstItem="kxI-fS-ap4" firstAttribute="top" secondItem="FpI-R2-3hm" secondAttribute="bottom" constant="60" id="OAp-bH-OO8"/>
-                            <constraint firstItem="kxI-fS-ap4" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="WM3-0u-vlO"/>
                             <constraint firstItem="FpI-R2-3hm" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-50" id="WVP-VO-kii"/>
+                            <constraint firstItem="xFz-xg-Cfa" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="qNz-Bn-Lak"/>
                             <constraint firstItem="Gxb-zC-ipS" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="yK0-UO-9Mk"/>
                             <constraint firstAttribute="trailing" secondItem="Gxb-zC-ipS" secondAttribute="trailing" constant="16" id="zaS-QV-qIV"/>
                         </constraints>
@@ -92,12 +90,22 @@
                         <outlet property="emailTextField" destination="xDc-pn-Eoo" id="LU8-ga-gji"/>
                         <outlet property="errorLbl" destination="RZr-kk-nge" id="1Vj-iJ-j0U"/>
                         <outlet property="passwordTextField" destination="LHh-Ej-reJ" id="XAZ-8h-q9O"/>
-                        <outlet property="verticallyConstraint" destination="WVP-VO-kii" id="XhR-qS-MRF"/>
+                        <segue destination="aJD-1K-1a8" kind="show" identifier="goToMainTBVC" id="NiH-bA-9Ha"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="434.78260869565219" y="97.767857142857139"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="9Sw-pA-bbs">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="aJD-1K-1a8" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="nnW-5R-aIT"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rm6-P2-QLc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1060" y="115"/>
         </scene>
         <!--SignUpStoryboard-->
         <scene sceneID="QqT-iJ-p9A">
@@ -130,11 +138,5 @@
     </scenes>
     <resources>
         <image name="person.badge.plus" catalog="system" width="128" height="124"/>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

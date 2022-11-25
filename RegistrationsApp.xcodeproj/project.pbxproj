@@ -12,6 +12,7 @@
 		F51B5C6E292FAB0600B51EC3 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51B5C6D292FAB0600B51EC3 /* WelcomeViewController.swift */; };
 		F51B5C70292FADE900B51EC3 /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51B5C6F292FADE900B51EC3 /* UserDefaultsService.swift */; };
 		F51B5C72292FAECD00B51EC3 /* UserDefaultsExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51B5C71292FAECD00B51EC3 /* UserDefaultsExt.swift */; };
+		F55DD5822930DBDE0072BC53 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55DD5812930DBDE0072BC53 /* ProfileViewController.swift */; };
 		F56B577029251246005131EF /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56B576F29251246005131EF /* SignInViewController.swift */; };
 		F56B577229251264005131EF /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56B577129251264005131EF /* CreateAccountViewController.swift */; };
 		F56B577529251D51005131EF /* VerificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56B577429251D51005131EF /* VerificationService.swift */; };
@@ -31,6 +32,7 @@
 		F51B5C6D292FAB0600B51EC3 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		F51B5C6F292FADE900B51EC3 /* UserDefaultsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
 		F51B5C71292FAECD00B51EC3 /* UserDefaultsExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExt.swift; sourceTree = "<group>"; };
+		F55DD5812930DBDE0072BC53 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F56B576F29251246005131EF /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		F56B577129251264005131EF /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		F56B577429251D51005131EF /* VerificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationService.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				F56B577129251264005131EF /* CreateAccountViewController.swift */,
 				F5D39AC5292B6A88004508D2 /* SecretCodeViewController.swift */,
 				F51B5C6D292FAB0600B51EC3 /* WelcomeViewController.swift */,
+				F55DD5812930DBDE0072BC53 /* ProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				F59B47F32924EF7300787FE8 /* AppDelegate.swift in Sources */,
 				F59B47F52924EF7300787FE8 /* SceneDelegate.swift in Sources */,
 				F51B5C72292FAECD00B51EC3 /* UserDefaultsExt.swift in Sources */,
+				F55DD5822930DBDE0072BC53 /* ProfileViewController.swift in Sources */,
 				F56B577029251246005131EF /* SignInViewController.swift in Sources */,
 				F51B5C6A292F6A8A00B51EC3 /* UIViewControllerExtension.swift in Sources */,
 				F5D39AC6292B6A88004508D2 /* SecretCodeViewController.swift in Sources */,

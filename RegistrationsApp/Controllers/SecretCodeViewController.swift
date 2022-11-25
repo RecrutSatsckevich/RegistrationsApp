@@ -23,14 +23,14 @@ class SecretCodeViewController: UIViewController {
         super.viewDidLoad()
         
         setupUI()
-        hideKeyboardWhenTappedAround()
         registerForKeyboardNotifications()
     }
     
     @IBAction private func codeTFAction(_ sender: UITextField) {
         guard let text = sender.text, !text.isEmpty,
-                text == randomInt.description else {
-            errorCodeLbl.text = "Error code. Please wait \(sleepTime) second"
+              text == randomInt.description
+        else {
+            errorCodeLbl.text = "Error code. Please wait \(sleepTime) seconds"
             sender.isUserInteractionEnabled = false
             errorCodeLbl.isHidden = false
             let dispachAfter = DispatchTimeInterval.seconds(sleepTime)

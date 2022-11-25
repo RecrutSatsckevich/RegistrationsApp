@@ -1,5 +1,5 @@
 //
-//  WelcomViewController.swift
+//  WelcomeViewController.swift
 //  RegistrationsApp
 //
 //  Created by dzmitry on 24.11.22.
@@ -21,7 +21,7 @@ class WelcomeViewController: UIViewController {
     @IBAction func saveUserDateAndContinueAction() {
         guard let userModel = userModel else { return }
         UserDefaultsService.saveUserModel(userModel: userModel)
-        navigationController?.popViewController(animated: true)
+        navigationController?.popToRootViewController(animated: true)
     }
     
     private func setupUI() {

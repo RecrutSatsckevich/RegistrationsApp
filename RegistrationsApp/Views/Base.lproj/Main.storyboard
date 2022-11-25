@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mbC-Gn-eoo">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -8,21 +8,50 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Profile-->
         <scene sceneID="hub-Ht-P3v">
             <objects>
-                <viewController id="AcU-O3-bsk" sceneMemberID="viewController">
+                <viewController id="AcU-O3-bsk" customClass="ProfileViewController" customModule="RegistrationsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RkG-iv-6eY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9e-vK-fct">
+                                <rect key="frame" x="264" y="94" width="100" height="39.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Log Out">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="21"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="logOutAction:" destination="AcU-O3-bsk" eventType="touchUpInside" id="Bsu-rm-Yuw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yN9-1T-A4Q">
+                                <rect key="frame" x="114.5" y="670" width="185" height="43"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Delete account">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="24"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="deleteAccountAction" destination="AcU-O3-bsk" eventType="touchUpInside" id="Ob1-WR-etJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="sC8-qq-onz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sC8-qq-onz" firstAttribute="bottom" secondItem="yN9-1T-A4Q" secondAttribute="bottom" constant="100" id="APv-kE-5Mb"/>
+                            <constraint firstItem="yN9-1T-A4Q" firstAttribute="centerX" secondItem="RkG-iv-6eY" secondAttribute="centerX" id="QVB-JS-7af"/>
+                            <constraint firstItem="E9e-vK-fct" firstAttribute="top" secondItem="sC8-qq-onz" secondAttribute="top" constant="50" id="dIV-Jk-qQJ"/>
+                            <constraint firstItem="E9e-vK-fct" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sC8-qq-onz" secondAttribute="leading" symbolic="YES" id="diY-el-zBu"/>
+                            <constraint firstItem="sC8-qq-onz" firstAttribute="trailing" secondItem="E9e-vK-fct" secondAttribute="trailing" constant="50" id="frH-y8-91O"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" image="person.fill" catalog="system" id="giB-gz-Nkn"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="giB-gz-Nkn"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FvX-we-lOT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1421" y="881"/>
+            <point key="canvasLocation" x="1420" y="933"/>
         </scene>
         <!--App-->
         <scene sceneID="esW-IQ-vea">

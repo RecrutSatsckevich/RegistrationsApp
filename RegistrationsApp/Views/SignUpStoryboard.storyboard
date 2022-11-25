@@ -180,7 +180,6 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.34901961679999999" green="0.66666668650000005" blue="0.87843137979999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="5CE-0m-tJj" firstAttribute="top" secondItem="0ZQ-pT-fyi" secondAttribute="top" id="Mja-Cz-Coz"/>
                                     <constraint firstAttribute="bottom" secondItem="5CE-0m-tJj" secondAttribute="bottom" id="RWO-Kr-HbB"/>
@@ -256,6 +255,7 @@ from your email</string>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
                                                     <action selector="codeTFAction:" destination="MNY-z6-tJW" eventType="editingDidEndOnExit" id="D78-Nn-qVH"/>
+                                                    <segue destination="BOb-XZ-ipf" kind="show" identifier="goToWelcomVC" id="6fr-F9-ljJ"/>
                                                 </connections>
                                             </textField>
                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H6e-kM-DtD">
@@ -283,7 +283,6 @@ from your email</string>
                         <outlet property="errorCodeLbl" destination="H6e-kM-DtD" id="Daq-j5-3b8"/>
                         <outlet property="secretCodeLabel" destination="1S4-Z7-ccx" id="2UJ-i1-C4a"/>
                         <outlet property="verticallyConstraint" destination="PIw-oR-tR6" id="KBz-O1-V3C"/>
-                        <segue destination="kaW-DP-N9r" kind="show" identifier="goToWelcomVC" id="Mbd-x2-Emo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Aq-xQ-7xF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -291,27 +290,15 @@ from your email</string>
             <point key="canvasLocation" x="746" y="98"/>
         </scene>
         <!--Welcome View Controller-->
-        <scene sceneID="gty-ln-vVV">
+        <scene sceneID="aNR-cz-R1H">
             <objects>
-                <viewController id="kaW-DP-N9r" customClass="WelcomeViewController" customModule="RegistrationsApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Hzq-Jx-aC6">
+                <viewController id="BOb-XZ-ipf" customClass="WelcomeViewController" customModule="RegistrationsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hlU-KB-EjN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNW-hN-Fb4">
-                                <rect key="frame" x="50" y="160.5" width="314" height="48"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
-                                <color key="textColor" red="0.95686274770000002" green="0.73725497719999999" blue="0.25490197539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="welcome to our  Cool App" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78f-zk-XGf">
-                                <rect key="frame" x="50" y="387.5" width="314" height="67"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HWo-Ga-hHU">
-                                <rect key="frame" x="50" y="732" width="314" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Z6-eK-wUm">
+                                <rect key="frame" x="50" y="692" width="314" height="50"/>
                                 <color key="backgroundColor" red="0.34901961679999999" green="0.66666668650000005" blue="0.87843137979999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -319,35 +306,52 @@ from your email</string>
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="30"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="saveUserDateAndContinueActoon" destination="kaW-DP-N9r" eventType="touchUpInside" id="tyL-ZG-rCs"/>
+                                    <action selector="saveUserDateAndContinueAction" destination="BOb-XZ-ipf" eventType="touchUpInside" id="qwf-nE-thy"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="130" translatesAutoresizingMaskIntoConstraints="NO" id="BEP-0X-Q9c">
+                                <rect key="frame" x="50" y="243.5" width="314" height="255"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhI-hg-BXz">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="53"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="44"/>
+                                        <color key="textColor" red="0.95686274770000002" green="0.73725497719999999" blue="0.25490197539999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="welcome to our  Cool App" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWh-f5-CYx">
+                                        <rect key="frame" x="0.0" y="183" width="314" height="72"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="FWj-03-Xdf"/>
-                        <color key="backgroundColor" red="0.34901961679999999" green="0.68627452850000004" blue="0.84313726430000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="EK1-ry-mYz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="FWj-03-Xdf" firstAttribute="trailing" secondItem="VNW-hN-Fb4" secondAttribute="trailing" constant="50" id="6s4-VP-FFt"/>
-                            <constraint firstItem="VNW-hN-Fb4" firstAttribute="leading" secondItem="FWj-03-Xdf" secondAttribute="leading" constant="50" id="8KQ-yH-7t6"/>
-                            <constraint firstItem="HWo-Ga-hHU" firstAttribute="leading" secondItem="FWj-03-Xdf" secondAttribute="leading" constant="50" id="9W4-go-b7C"/>
-                            <constraint firstItem="FWj-03-Xdf" firstAttribute="bottom" secondItem="HWo-Ga-hHU" secondAttribute="bottom" constant="60" id="AxG-QW-Ujs"/>
-                            <constraint firstItem="VNW-hN-Fb4" firstAttribute="top" secondItem="FWj-03-Xdf" secondAttribute="top" constant="116.5" id="L9u-SY-qMO"/>
-                            <constraint firstItem="78f-zk-XGf" firstAttribute="centerY" secondItem="Hzq-Jx-aC6" secondAttribute="centerY" id="MvK-j4-WNc"/>
-                            <constraint firstItem="78f-zk-XGf" firstAttribute="leading" secondItem="FWj-03-Xdf" secondAttribute="leading" constant="50" id="OKN-bA-OaU"/>
-                            <constraint firstItem="FWj-03-Xdf" firstAttribute="trailing" secondItem="78f-zk-XGf" secondAttribute="trailing" constant="50" id="hrl-9F-xSE"/>
-                            <constraint firstItem="FWj-03-Xdf" firstAttribute="trailing" secondItem="HWo-Ga-hHU" secondAttribute="trailing" constant="50" id="jKz-Qz-eni"/>
+                            <constraint firstItem="EK1-ry-mYz" firstAttribute="trailing" secondItem="BEP-0X-Q9c" secondAttribute="trailing" constant="50" id="Grt-Bz-bTW"/>
+                            <constraint firstItem="EK1-ry-mYz" firstAttribute="bottom" secondItem="9Z6-eK-wUm" secondAttribute="bottom" constant="100" id="bRG-O4-ySb"/>
+                            <constraint firstItem="9Z6-eK-wUm" firstAttribute="leading" secondItem="EK1-ry-mYz" secondAttribute="leading" constant="50" id="f6y-uO-fn6"/>
+                            <constraint firstItem="BEP-0X-Q9c" firstAttribute="leading" secondItem="EK1-ry-mYz" secondAttribute="leading" constant="50" id="mdk-xo-s5Y"/>
+                            <constraint firstItem="BEP-0X-Q9c" firstAttribute="centerY" secondItem="hlU-KB-EjN" secondAttribute="centerY" constant="-50" id="phy-5u-G6W"/>
+                            <constraint firstItem="EK1-ry-mYz" firstAttribute="trailing" secondItem="9Z6-eK-wUm" secondAttribute="trailing" constant="50" id="vwz-gO-vrN"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="82j-Z2-88U"/>
+                    <navigationItem key="navigationItem" id="Jqa-f0-vG7"/>
                     <connections>
-                        <outlet property="infoLbl" destination="78f-zk-XGf" id="S5d-Jm-1Ne"/>
+                        <outlet property="infoLbl" destination="jWh-f5-CYx" id="Qly-ZZ-zNo"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IwX-XN-Ehk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Puf-4h-gEW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1455" y="98"/>
+            <point key="canvasLocation" x="1490" y="98"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
