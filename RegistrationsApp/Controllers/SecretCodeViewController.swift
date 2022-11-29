@@ -43,7 +43,7 @@ class SecretCodeViewController: UIViewController {
             return
         }
         performSegue(withIdentifier: "goToWelcomVC", sender: nil)
-    }
+    } 
     
     private func setupUI() {
         secretCodeLabel.text = "Please enter code '\(randomInt)' from \(userModel?.email ?? "")"
