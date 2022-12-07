@@ -252,7 +252,7 @@ from your email</string>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rl4-gY-aFN">
                                                 <rect key="frame" x="0.0" y="0.0" width="314" height="35"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 <connections>
                                                     <action selector="codeTFAction:" destination="MNY-z6-tJW" eventType="editingDidEndOnExit" id="D78-Nn-qVH"/>
                                                     <segue destination="BOb-XZ-ipf" kind="show" identifier="goToWelcomVC" id="6fr-F9-ljJ"/>
