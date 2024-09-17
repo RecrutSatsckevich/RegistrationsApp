@@ -27,7 +27,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="FpI-R2-3hm">
-                                <rect key="frame" x="25" y="306" width="364" height="184"/>
+                                <rect key="frame" x="25" y="266.5" width="364" height="263.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1cE-rK-J9N">
                                         <rect key="frame" x="0.0" y="0.0" width="364" height="36"/>
@@ -56,31 +56,26 @@
                                             </label>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xFz-xg-Cfa">
+                                        <rect key="frame" x="0.0" y="224" width="364" height="39.5"/>
+                                        <color key="backgroundColor" red="0.83529412749999998" green="0.90196073060000004" blue="0.99215686319999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Sign In">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="21"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="signInAction" destination="Y6W-OH-hqX" eventType="touchUpInside" id="VfT-bb-VAh"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xFz-xg-Cfa">
-                                <rect key="frame" x="152" y="585" width="110" height="39.5"/>
-                                <color key="backgroundColor" red="0.83529412749999998" green="0.90196073060000004" blue="0.99215686319999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="110" id="ZMh-c5-QCz"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Sign In">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="21"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="signInAction" destination="Y6W-OH-hqX" eventType="touchUpInside" id="VfT-bb-VAh"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="xFz-xg-Cfa" firstAttribute="top" secondItem="FpI-R2-3hm" secondAttribute="bottom" constant="95" id="03v-Op-k3A"/>
                             <constraint firstItem="FpI-R2-3hm" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="Cs1-S0-JKx"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="FpI-R2-3hm" secondAttribute="trailing" constant="25" id="NcE-I3-Jye"/>
                             <constraint firstItem="FpI-R2-3hm" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-50" id="WVP-VO-kii"/>
-                            <constraint firstItem="xFz-xg-Cfa" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="qNz-Bn-Lak"/>
                             <constraint firstItem="Gxb-zC-ipS" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="yK0-UO-9Mk"/>
                             <constraint firstAttribute="trailing" secondItem="Gxb-zC-ipS" secondAttribute="trailing" constant="16" id="zaS-QV-qIV"/>
                         </constraints>

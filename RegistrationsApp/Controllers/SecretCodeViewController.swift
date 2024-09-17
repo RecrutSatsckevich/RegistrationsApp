@@ -24,6 +24,7 @@ class SecretCodeViewController: UIViewController {
         
         setupUI()
         registerForKeyboardNotifications()
+        addDoneButtonTo(enterCodeTextField)
     }
     
     @IBAction private func codeTFAction(_ sender: UITextField) {
@@ -43,13 +44,34 @@ class SecretCodeViewController: UIViewController {
             return
         }
         performSegue(withIdentifier: "goToWelcomVC", sender: nil)
-    }
+    } 
     
     private func setupUI() {
         secretCodeLabel.text = "Please enter code '\(randomInt)' from \(userModel?.email ?? "")"
     }
     
     // MARK: - Keyboard
+    
+    private func addDoneButtonTo(_ textField: UITextField) {
+        let keyboardToolbar = UIToolbar()
+        textField.inputAccessoryView = keyboardToolbar
+        keyboardToolbar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(title: "Готово",
+                                         style: .done,
+                                         target: self,
+                                         action: #selector(didTapDone))
+        
+        let flexBarButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
+                                            target: nil,
+                                            action: nil)
+        
+        keyboardToolbar.items = [flexBarButton, doneButton]
+    }
+    
+    @objc private func didTapDone() {
+        view.endEditing(true)
+    }
     
     private func registerForKeyboardNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(kbWillShow),
